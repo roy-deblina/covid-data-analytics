@@ -14,3 +14,33 @@ Global Numbers: Calculates global COVID-19 statistics, including total cases, to
 Total Population vs Vaccination: Calculates the percentage of the population that has been vaccinated against COVID-19, considering total population and vaccination data.
 Creating View for Visualization Data: Creates a view named percentpopnvaccinated, which combines COVID-19 cases and vaccination data for later visualization.
 Temporary Table Creation: Creates a temporary table named percentpopulationvaccinated to store combined COVID-19 cases and vaccination data for further analysis.
+
+# Visualizations in Tableau
+
+## Visual 1
+- Add `total_deaths`, `total_cases`, and `death_percent` to the Columns shelf using aggregate functions.
+- Select the chart type as `Cart`.
+- Adjust color and size as desired.
+- Set `death_percent` column to display 2 decimal points by selecting from the number format options.
+
+## Visual 2
+- From the `Location` column, select `Countries/Region` for geographical role as the visualization will be a map.
+- Add `longitude` to the Columns shelf and `latitude` to the Rows shelf.
+- Add `location` and `percent_population_infected` to Marks.
+- Select `percent_population_infected` for color to differentiate locations by color.
+
+## Visual 3
+- Add `date` to the Columns shelf and `percent_population_infected` to the Rows shelf.
+- Adjust `percent_population_infected` to display as an average and `date` to display month-wise.
+- Customize the visualization by adding `location` for color and label.
+- Use the Analysis menu to select Forecast to generate a forecasting visual.
+- Add labels for population infected.
+
+## Visual 4
+- Place `Location` in Columns and `totalDeathcount` in Rows.
+- Choose a column chart as the visual.
+- Customize color and size as desired.
+
+## Dashboard
+- Create a new dashboard to combine all four sheet visuals onto a single page.
+
